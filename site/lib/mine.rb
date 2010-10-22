@@ -5,7 +5,7 @@ module Mine
   autoload :Attributes, 'mine/attributes'
   autoload :Gem,        'mine/gem'
   
-  def self.fetch(page=1)
+  def self.fetch(page)
     response = REST.get("http://rubygems.org/api/v1/search.json?query=&page=#{page}")
     case response.status_code
     when 200
@@ -15,8 +15,8 @@ module Mine
     end
   end
   
-  def self.all
-    fetch.map do |description|
+  def self.all(page)
+    fetch(page).map do |description|
       Mine::Gem.new(description)
     end
   end
