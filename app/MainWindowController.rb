@@ -28,9 +28,10 @@ class MainWindowController < NSWindowController
     @webView.mainFrame.loadRequest(NSURLRequest.requestWithURL(URL))
   end
 
-  def windowWillClose(notification)
+  def close(sender)
     NSApp.terminate(self)
   end
+  alias windowWillClose close
 
   def isGemInstalled(name, version:version)
     File.exist?(File.join(userGemPath, "gems", "#{name}-#{version}"))

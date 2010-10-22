@@ -120,6 +120,7 @@
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMinSize">{850, 542}</string>
 				<string key="NSMaxSize">{850, 2070}</string>
+				<string key="NSFrameAutosaveName">MainWindow</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
