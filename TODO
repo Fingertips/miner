@@ -1,6 +1,8 @@
 Mac App
 =======
 
+* Remove unused menu items
+
 Later
 * Make the gem installation async so the UI does't freeze
 * Add helper from passenger pane to be able to run a command with root privs
