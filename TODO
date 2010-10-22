@@ -4,6 +4,7 @@ Mac App
 * Remove unused menu items
 
 Later
+* Add pref to disable generating docs
 * Fix RubyGems/YARD to use a seperate exit status for `install failed' and `generating YARD failed, but gem still installed'.
 * Add helper from passenger pane to be able to run a command with root privs
 * Use RubyGems API to get install directory
