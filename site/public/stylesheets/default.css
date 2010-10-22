@@ -21,7 +21,7 @@ body
   float: left;
   border-top: 1px solid #eee;
 }
-#gems p.description
+#gems div.description p
 {
   font-size: 75%;
   color: #999;
