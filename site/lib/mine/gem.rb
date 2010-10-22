@@ -1,5 +1,8 @@
 module Mine
   class Gem
+    DISQUALIFIED = 0.0
+    USED_TOO_MUCH = 1000
+    
     include Attributes
     
     def authors
@@ -7,7 +10,13 @@ module Mine
     end
     
     def score
-      0.1
+      if @attributes['downloads'].blank? or
+         @attributes['downloads'].zero? or
+         @attributes['downloads'] > USED_TOO_MUCH
+        DISQUALIFIED
+      else
+        @attributes['version_downloads'].to_f / @attributes['downloads']
+      end
     end
   end
 end
