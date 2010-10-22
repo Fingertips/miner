@@ -63,3 +63,7 @@ button[disabled]:hover
 {
   background: #000 -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#c6c6c6));
 }
+.clear
+{
+  clear: both;
+}
