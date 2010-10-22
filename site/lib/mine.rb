@@ -5,8 +5,8 @@ module Mine
   autoload :Attributes, 'mine/attributes'
   autoload :Gem,        'mine/gem'
   
-  def self.fetch
-    response = REST.get('http://rubygems.org/api/v1/search.json?query=cucumber')
+  def self.fetch(page=1)
+    response = REST.get("http://rubygems.org/api/v1/search.json?query=&page=#{page}")
     case response.status_code
     when 200
       JSON.parse(response.body)
