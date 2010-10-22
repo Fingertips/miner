@@ -34,6 +34,22 @@ class MainWindowController < NSWindowController
   end
 
   def installGem(name)
-    puts "Install gem: #{name}"
+    puts "Install gem `#{name}' to gem path `#{userGemPath}'"
+    puts `gem install #{name} --install-dir=#{userGemPath}`
+    $?.success?
   end
+
+  def userGemPath
+    @userGemPath ||= File.expand_path("~/.gem/ruby/1.8")
+  end
+
+  # TODO For now we assume the user has the rights to install a gem, so this isn't used yet.
+  #def needsRootPrivilege?
+    ## TODO un-lame this by using rubygems API
+    #@needsRootPrivilege ||= begin
+      #env = `gem env`
+      #path = File.join(env.match(/INSTALLATION DIRECTORY:\s?(.+?)\n/)[1], 'gems')
+      #!File.File.grpowned?(path)
+    #end
+  #end
 end
