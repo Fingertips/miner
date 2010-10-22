@@ -2,3 +2,44 @@ body
 {
   font: 18px/16px Helvetica Neu, Sans-serif;
 }
+#gems
+{
+  width: 820px;
+}
+#gems > div
+{
+  padding: 3px;
+  position: relative;
+  width: 400px;
+  float: left;
+  border-top: 1px solid #eee;
+}
+button
+{
+  font-size: 100%;
+  position: absolute;
+  padding: 3px 6px;
+  right: 16px;
+  top: 16px;
+  border-radius: 3px;
+  color: #000;
+  border: 1px solid #999;
+  background: #000 -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#c6c6c6));
+  text-shadow: #fff 0px 1px 1px;
+}
+button:hover
+{
+  background: #000 -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#d6d6d6));
+  background: -moz-linear-gradient(top, #fefefe, #d6d6d6);
+}
+button:focus
+{
+  border: 1px solid #005f93;
+}
+button:active
+{
+  color: #444;
+  border: 1px solid #444;
+  background: #000 -webkit-gradient(linear, left top, left bottom, from(#848484), to(#bdbdbd));
+  text-shadow: #eee 0px 1px 1px;
+}
