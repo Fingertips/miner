@@ -50,6 +50,7 @@
 		5146AB781271888000B9CA37 /* MainWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5146AB771271888000B9CA37 /* MainWindowController.rb */; };
 		5146AB7B127188B400B9CA37 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5146AB7A127188B400B9CA37 /* MainWindow.xib */; };
 		5146AB8312718B6200B9CA37 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5146AB8212718B6200B9CA37 /* WebKit.framework */; };
+		5146AB9212718E6D00B9CA37 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5146AB9112718E6D00B9CA37 /* index.html */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -81,6 +82,7 @@
 		5146AB771271888000B9CA37 /* MainWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MainWindowController.rb; sourceTree = "<group>"; };
 		5146AB7A127188B400B9CA37 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		5146AB8212718B6200B9CA37 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		5146AB9112718E6D00B9CA37 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Miner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5146AB9112718E6D00B9CA37 /* index.html */,
 				5146AB771271888000B9CA37 /* MainWindowController.rb */,
 				5146AB7A127188B400B9CA37 /* MainWindow.xib */,
 				2BFA9DA510CDF852007972A1 /* MainMenu.xib */,
@@ -230,6 +233,7 @@
 				5146AB74127186EA00B9CA37 /* AppDelegate.rb in Resources */,
 				5146AB781271888000B9CA37 /* MainWindowController.rb in Resources */,
 				5146AB7B127188B400B9CA37 /* MainWindow.xib in Resources */,
+				5146AB9212718E6D00B9CA37 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
