@@ -7,7 +7,7 @@ class MainWindowController < NSWindowController
     selector != :"installGem:"
   end
 
-  # TODO Returning a pretty name results in a segfault.
+  # TODO MacRuby bug: Returning a pretty name results in a segfault.
   #def self.webScriptNameForSelector(selector)
     #'installGem' if selector == :'installGem:'
   #end
@@ -42,14 +42,4 @@ class MainWindowController < NSWindowController
   def userGemPath
     @userGemPath ||= File.expand_path("~/.gem/ruby/1.8")
   end
-
-  # TODO For now we assume the user has the rights to install a gem, so this isn't used yet.
-  #def needsRootPrivilege?
-    ## TODO un-lame this by using rubygems API
-    #@needsRootPrivilege ||= begin
-      #env = `gem env`
-      #path = File.join(env.match(/INSTALLATION DIRECTORY:\s?(.+?)\n/)[1], 'gems')
-      #!File.File.grpowned?(path)
-    #end
-  #end
 end
