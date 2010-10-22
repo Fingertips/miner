@@ -1,6 +1,6 @@
 <div>
   <h3><%=h gem.name %></h3>
   <p><%=format_authors gem.authors %></p>
-  <%= content_tag('button', 'Install', 'data-gem-uri' => gem.gem_uri) %>
+  <%= content_tag('button', 'Install', 'data-gem-name' => gem.name) %>
   <p class="description"><%=h gem.info %></p>
 </div>

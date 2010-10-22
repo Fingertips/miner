@@ -25,7 +25,8 @@ class MainWindowController < NSWindowController
     @webView.customUserAgent = 'MinerApp'
     @webView.frameLoadDelegate = self
 
-    request = NSURLRequest.requestWithURL(NSBundle.mainBundle.URLForResource('index', withExtension:'html'))
+    #request = NSURLRequest.requestWithURL(NSBundle.mainBundle.URLForResource('index', withExtension:'html'))
+    request = NSURLRequest.requestWithURL(NSURL.URLWithString('http://miner.local'))
     @webView.mainFrame.loadRequest(request)
   end
 
