@@ -6,7 +6,7 @@ if (navigator.userAgent == 'MinerApp') {
     } else {
       button.innerHTML = 'Failed';
     }
-    button.disabled = false;
+    button.removeAttribute('disabled');
   }
 
   console.log('Add install gem observers.');
@@ -21,7 +21,7 @@ if (navigator.userAgent == 'MinerApp') {
     button.observe('click', function(event) {
       // TODO: make installing async so we can inform the user we're installing and don't freeze the UI.
       button.innerHTML = 'Installing&hellip;';
-      button.disabled = true;
+      button.writeAttribute('disabled', 'disabled');
       var name = this.readAttribute('data-gem-name');
       MinerApp.installGem_(name);
     });
