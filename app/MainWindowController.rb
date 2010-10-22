@@ -40,6 +40,6 @@ class MainWindowController < NSWindowController
   end
 
   def userGemPath
-    @userGemPath ||= File.expand_path("~/.gem/ruby/1.8")
+    @userGemPath ||= File.join(NSHomeDirectory(), ".gem/ruby/1.8")
   end
 end
