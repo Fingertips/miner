@@ -1,6 +1,6 @@
 <div>
   <h3><%=h rock.name %></h3>
   <p><%=format_authors rock.authors %></p>
-  <%= content_tag('button', 'Install', 'data-gem-name' => rock.name) %>
+  <%= content_tag('button', 'Install', 'data-gem-name' => rock.name, 'data-gem-version' => rock.version) %>
   <p class="description"><%=h rock.description %></p>
 </div>
