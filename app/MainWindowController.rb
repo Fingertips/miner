@@ -34,10 +34,20 @@ class MainWindowController < NSWindowController
     webView.windowScriptObject.setValue(self, forKey:'MinerApp')
   end
 
+  # TODO Just using $?.success? isn't really enough, because RubyGems can
+  # install a gem and still return that it was not a success. For example,
+  # if YARD fails to generate docs.
   def installGem(name)
-    puts "Install gem `#{name}' to gem path `#{userGemPath}'"
-    puts `gem install #{name} --install-dir=#{userGemPath}`
-    $?.success?
+    Dispatch::Queue.concurrent(:default).async do
+      NSLog("Install gem `#{name}' to gem path `#{userGemPath}'")
+      NSLog(`gem install #{name} --install-dir=#{userGemPath}`)
+      performSelectorOnMainThread('finishedInstallingGem:', withObject: [name, $?.success?], waitUntilDone: true)
+    end
+  end
+
+  def finishedInstallingGem(args)
+    name, success = args
+    @webView.windowScriptObject.evaluateWebScript("finishedInstallingGem('#{name}', #{success});")
   end
 
   def userGemPath
