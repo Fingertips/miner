@@ -20,10 +20,16 @@ class MainWindowController < NSWindowController
   end
 
   def windowDidLoad
+    window.delegate = self
+
     @webView.customUserAgent = 'MinerApp'
     @webView.frameLoadDelegate = self
     @webView.windowScriptObject.setValue(self, forKey:'MinerApp')
     @webView.mainFrame.loadRequest(NSURLRequest.requestWithURL(URL))
+  end
+
+  def windowWillClose(notification)
+    NSApp.terminate(self)
   end
 
   def isGemInstalled(name, version:version)

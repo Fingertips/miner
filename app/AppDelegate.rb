@@ -1,6 +1,6 @@
 class AppDelegate
   def applicationDidFinishLaunching(notification)
     @mainWindowController = MainWindowController.controller
-    @mainWindowController.window
+    @mainWindowController.showWindow(self)
   end
 end
