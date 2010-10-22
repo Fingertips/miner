@@ -1,0 +1,44 @@
+load 'deploy'
+
+default_run_options[:pty] = true
+
+set :application,      'miner'
+set :url,              'https://minerapp.com'
+set :repository,       'git://github.com/Fingertips/miner.git'
+set :scm,              'git'
+set :branch,           'master'
+set :git_shallow_clone, 1
+
+set :domain,           'pipe.dwerg.net'
+role :web, domain
+role :app, domain
+role :db,  domain, :primary => true
+
+set :runner, 'app'
+set :user,   'deploy'
+set :deploy_to, "/var/www/#{application}"
+
+require 'rubygems'
+require 'fingercap/recipes/passenger'
+
+namespace :deploy do
+  desc "Stop the application (empty operation on Pipe)"
+  task :stop do
+  end
+  
+  desc "Start the application"
+  task :start do
+    apache.restart
+  end
+  
+  desc "Restart the application"
+  task :restart do
+    passenger.restart
+  end
+  
+  desc "Make sure the permissions are correct for all the directories"
+  task :fix_permissions do
+    try_sudo "chown -R #{user}:wheel #{deploy_to}"
+    try_sudo "chown -R #{fetch(:runner, "app")}:wheel #{shared_path}"
+  end
+end
