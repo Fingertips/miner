@@ -1,0 +1,9 @@
+desc 'Clean'
+task :clean do
+  rm_rf 'build'
+end
+
+desc 'Release'
+task :release do
+  sh 'xcodebuild -project Miner.xcodeproj -configuration Release -target Embed'
+end

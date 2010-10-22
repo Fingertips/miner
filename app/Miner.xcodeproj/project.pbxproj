@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		172754BD107597F200D0347B /* Unit Tests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 172754C7107597F400D0347B /* Build configuration list for PBXAggregateTarget "Unit Tests" */;
-			buildPhases = (
-				172754BC107597F200D0347B /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "Unit Tests";
-			productName = "Unit Tests";
-		};
 		4D1A51A110A4FF5D0046A98A /* Compile */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 4D1A51AB10A4FF6A0046A98A /* Build configuration list for PBXAggregateTarget "Compile" */;
@@ -25,6 +14,7 @@
 				4D1A51A010A4FF5D0046A98A /* ShellScript */,
 			);
 			dependencies = (
+				5146AC071271A02500B9CA37 /* PBXTargetDependency */,
 			);
 			name = Compile;
 			productName = Compile;
@@ -36,6 +26,7 @@
 				4D1A51A410A4FF640046A98A /* ShellScript */,
 			);
 			dependencies = (
+				5146AC051271A01D00B9CA37 /* PBXTargetDependency */,
 			);
 			name = Embed;
 			productName = Embed;
@@ -55,6 +46,23 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5146AC041271A01D00B9CA37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D1A51A110A4FF5D0046A98A /* Compile */;
+			remoteInfo = Compile;
+		};
+		5146AC061271A02500B9CA37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Miner */;
+			remoteInfo = Miner;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		172754B4107597CF00D0347B /* CopyFiles */ = {
@@ -215,7 +223,6 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Miner */,
-				172754BD107597F200D0347B /* Unit Tests */,
 				4D1A51A110A4FF5D0046A98A /* Compile */,
 				4D1A51A510A4FF640046A98A /* Embed */,
 			);
@@ -240,19 +247,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		172754BC107597F200D0347B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/macruby Tests/run_suite.rb";
-		};
 		4D1A51A010A4FF5D0046A98A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,7 +271,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
+			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed --no-stdlib \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -291,6 +285,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5146AC051271A01D00B9CA37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D1A51A110A4FF5D0046A98A /* Compile */;
+			targetProxy = 5146AC041271A01D00B9CA37 /* PBXContainerItemProxy */;
+		};
+		5146AC071271A02500B9CA37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Miner */;
+			targetProxy = 5146AC061271A02500B9CA37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -312,27 +319,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		172754BE107597F200D0347B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Unit Tests";
-			};
-			name = Debug;
-		};
-		172754BF107597F200D0347B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				PRODUCT_NAME = "Unit Tests";
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		4D1A51A210A4FF5D0046A98A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -440,15 +426,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		172754C7107597F400D0347B /* Build configuration list for PBXAggregateTarget "Unit Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				172754BE107597F200D0347B /* Debug */,
-				172754BF107597F200D0347B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4D1A51AB10A4FF6A0046A98A /* Build configuration list for PBXAggregateTarget "Compile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
