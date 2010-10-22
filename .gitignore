@@ -1,2 +1,8 @@
+*.swp
+*.swo
+.DS_Store
+app/build
+app/Miner.xcodeproj/*.mode1v3
+app/Miner.xcodeproj/*.pbxuser
 site/log/*
 site/tmp/*
