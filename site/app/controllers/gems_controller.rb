@@ -1,5 +1,5 @@
 class GemsController < ApplicationController
   def index
-    @gems = Mine.all
+    @rocks = Rock.hottest
   end
 end

@@ -1,0 +1,16 @@
+active_support:
+  name: activesupport
+  score: 0.0
+  description: It's ActiveSupport!
+i18n:
+  name: i18n
+  score: 0.72
+  description: It's i18n!
+builder:
+  name: builder
+  score: 0.1
+  description: It's Builder!
+nap:
+  name: nap
+  score: 0.9
+  description: It's Nap!!!

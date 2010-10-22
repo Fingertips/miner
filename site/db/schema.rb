@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101022122316) do
+ActiveRecord::Schema.define(:version => 20101022124656) do
 
   create_table "rocks", :force => true do |t|
     t.string   "name"
     t.text     "authors"
     t.text     "description"
-    t.integer  "score"
+    t.float    "score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
