@@ -42,7 +42,6 @@ button
 button:hover
 {
   background: #000 -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#d6d6d6));
-  background: -moz-linear-gradient(top, #fefefe, #d6d6d6);
 }
 button:focus
 {
@@ -54,4 +53,13 @@ button:active
   border: 1px solid #444;
   background: #000 -webkit-gradient(linear, left top, left bottom, from(#848484), to(#bdbdbd));
   text-shadow: #eee 0px 1px 1px;
+}
+button[disabled]
+{
+  color: #fff;
+  text-shadow: #aaa 0px -1px -1px;
+}
+button[disabled]:hover
+{
+  background: #000 -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#c6c6c6));
 }
