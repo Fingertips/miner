@@ -2,7 +2,6 @@ Mac App
 =======
 
 * Add helper from passenger pane to be able to run a command with root privs
-* Expose `install this gem' function to JS
 
 Later
 * Expose `is this gem already installed' function to JS
