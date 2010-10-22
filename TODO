@@ -6,7 +6,8 @@ Mac App
 Later
 * Remove prototype.js for pure JS
 * Add pref to disable generating docs
-* Fix RubyGems/YARD to use a seperate exit status for `install failed' and `generating YARD failed, but gem still installed'.
+* Remapping selectors to pretty JS function names segfaults on MacRuby trunk
+* Fix RubyGems/YARD to use a seperate exit status for `install failed' and `generating YARD failed, but gem still installed'
 * Add helper from passenger pane to be able to run a command with root privs
 * Use RubyGems API to get install directory
 
