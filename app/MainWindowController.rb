@@ -4,4 +4,8 @@ class MainWindowController < NSWindowController
   end
 
   attr_accessor :webView
+
+  def windowDidLoad
+    @webView.customUserAgent = 'MinerApp'
+  end
 end

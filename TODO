@@ -1,8 +1,6 @@
 Mac App
 =======
 
-* Load webapp in webview
-* Use a specific user agent, so the JS can decide whether or not it can directly install the gem
 * Add helper from passenger pane to be able to run a command with root privs
 * Expose `install this gem' function to JS
 
