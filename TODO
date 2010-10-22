@@ -12,3 +12,7 @@ Later
 Web App
 =======
 
+* Markdown on gem description
+* Make JS work to install gem
+* Don't show install links (or a message that the user should run `gem install name') when the user-agent is NOT MinerApp
+* Move inline onclick handler to a separate JS file and use data attribute for the gem name (otherwise the unobtrusive-police will shoot us)
