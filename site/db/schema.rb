@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101022124656) do
+ActiveRecord::Schema.define(:version => 20101022130929) do
 
   create_table "rocks", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(:version => 20101022124656) do
     t.float    "score"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "downloads"
+    t.integer  "version_downloads"
+    t.string   "version"
   end
 
   add_index "rocks", ["name"], :name => "index_rocks_on_name", :unique => true

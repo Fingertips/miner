@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../config/environment',  __FILE__)
+
+Rock.find_in_batches do |clump|
+  clump.each do |rock|
+    rock.update_attributes(
+      :score => Mine::Gem.new(:downloads => rock.downloads, :version_downloads => rock.version_downloads).score
+    )
+  end
+end

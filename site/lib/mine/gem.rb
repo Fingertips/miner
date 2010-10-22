@@ -1,7 +1,7 @@
 module Mine
   class Gem
     DISQUALIFIED = 0.0
-    USED_TOO_MUCH = 1000
+    USED_TOO_MUCH = 3000
     
     include Attributes
     

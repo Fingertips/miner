@@ -1,7 +1,20 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../config/environment',  __FILE__)
 
-Mine.all(1).each do |gem|
-  rock = Rock.find_or_initialize_by_name(gem.name)
-  rock.update_attributes(:description => gem.info, :authors => gem.authors, :score => gem.score)
+page = 1
+while(page)
+  puts "Fetching page ##{page}"
+  gems = Mine.all(page)
+  gems.each do |gem|
+    rock = Rock.find_or_initialize_by_name(gem.name)
+    rock.update_attributes(
+      :description => gem.info,
+      :authors => gem.authors,
+      :version => gem.version,
+      :downloads => gem.downloads,
+      :version_downloads => gem.version_downloads,
+      :score => gem.score
+    )
+  end
+  page = gems.empty? ? nil : page + 1
 end
