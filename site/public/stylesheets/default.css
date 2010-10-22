@@ -1,6 +1,13 @@
 body
 {
   font: 18px/16px Helvetica Neu, Sans-serif;
+  color: #222;
+}
+#introduction
+{
+  width: 820px;
+  font-size: 200%;
+  text-align: center;
 }
 #gems
 {
@@ -8,11 +15,16 @@ body
 }
 #gems > div
 {
-  padding: 3px;
+  padding: 3px 20px;
   position: relative;
-  width: 400px;
+  width: 370px;
   float: left;
   border-top: 1px solid #eee;
+}
+#gems p.description
+{
+  font-size: 75%;
+  color: #999;
 }
 button
 {
