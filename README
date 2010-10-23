@@ -12,15 +12,24 @@
        .'` \     |_
     jgs     '-__ / `-
 
-Miner tries to discover gems that have been getting attention, but not too much, and present them in a ‘app store’ type of interface: http://minerapp.com. Although the update script currently does not run yet, the theory is that you’d see a fresh page of upcoming gems, every day.
+  http://minerapp.com
 
-For Mac OS X, a ‘single site browser’ app is available, which allows you to install the gems with a single click and see which you already have installed. Grab the latest from: http://minerapp.com/releases/current.zip
+Miner tries to discover gems that have been getting attention, but not too much, and present them
+in a ‘app store’ type of interface. Although the update script currently does
+not run yet, the theory is that you’d see a fresh page of upcoming gems, every day.
+
+For Mac OS X, a ‘single site browser’ app is available, which allows you to install the gems with
+a single click and see which you already have installed. Grab the latest from:
+
+  http://minerapp.com/releases/current.zip
 
 This was our entry for the http://rubyandrails.eu/rumble, which we won :)
 
-Some possible ideas for the site that could be worked on are integration in rubygems.org (gemcutter) and add voting with a similar scoring technique. The app is just a baby, the sky is the limit. Patches are welcome!
+Possible ideas for the site include integration in rubygems.org (gemcutter) and add voting with a
+similar scoring technique. The app is just a baby, the sky is the limit. Patches are welcome!
 
 Available under the LITL license (http://github.com/license-in-three-lines/LICENSE):
+
   Copyright 2010 Manfred Stienstra, Eloy Duran, Fingertips.
   You may use this work without restrictions, as long as this notice is included.
   The work is provided "as is" without warranty of any kind, neither express nor implied.
