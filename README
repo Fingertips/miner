@@ -15,8 +15,7 @@
   http://minerapp.com
 
 Miner tries to discover gems that have been getting attention, but not too much, and present them
-in a ‘app store’ type of interface. Although the update script currently does
-not run yet, the theory is that you’d see a fresh page of upcoming gems, every day.
+in a ‘app store’ type of interface. Every day a fresh page of upcoming gems is created.
 
 For Mac OS X, a ‘single site browser’ app is available, which allows you to install the gems with
 a single click and see which you already have installed. Grab the latest from:
